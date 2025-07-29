@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Global - Beauty, Health & Wellness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations and effects */
+        .hero-gradient {
+            background-image: linear-gradient(135deg, rgba(156,39,176,0.3) 0%, rgba(74,20,140,0.3) 100%), url(images/home.jpg);
+            background-size:100%;
+            background-repeat:no-repeat;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        .service-icon {
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover .service-icon {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="flex items-center">
+                        <i class="fas fa-spa text-pink-500 text-3xl mr-2"></i>
+                        <span class="text-xl font-bold text-purple-800">SUCCESS GLOBAL</span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#home" class="text-purple-700 hover:text-purple-900 px-3 py-2 font-medium">Home</a>
+                        <a href="#about" class="text-gray-700 hover:text-purple-900 px-3 py-2 font-medium">About</a>
+                        <a href="#services" class="text-gray-700 hover:text-purple-900 px-3 py-2 font-medium">Services</a>
+                        <a href="#products" class="text-gray-700 hover:text-purple-900 px-3 py-2 font-medium">Products</a>
+                        <a href="#contact" class="text-gray-700 hover:text-purple-900 px-3 py-2 font-medium">Contact</a>
+                        <a href="#contact"button class="bg-pink-400 hover:bg-purple-600 text-white px-6 py-2 rounded-full font-medium transition-al"href="#contact">
+                            Book Appointment
+                        </button></a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-700 hover:text-purple-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-purple-700 bg-purple-50">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-900 hover:bg-purple-50">About</a>
+                <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-900 hover:bg-purple-50">Services</a>
+                <a href="#products" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-900 hover:bg-purple-50">Products</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-900 hover:bg-purple-50">Contact</a>
+                <a href="#contact"button class="w-full mt-2 bg-pink-500 hover:bg-purple-700 text-white px-6 py-2 rounded-full font-medium">
+                    Book Appointment
+                </button></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Your Journey to Beauty & Wellness Starts Here
+                    </h1>
+                    <p class="text-xl mb-8 opacity-90">
+                        Success Global offers premium cosmetic, beauty, and healthcare solutions to help you look and feel your best.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="services.html"button class="bg-white text-purple-700 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold text-lg transition-all">
+                            Explore Services
+                        </button></a>
+                        <a href="#products"button class="border-2 border-white text-white hover:bg-white hover:text-purple-700 px-8 py-3 rounded-full font-semibold text-lg transition-all">
+                            Our Products
+                        </button></a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="images/cos2.jpg" 
+                         alt="Beauty Products" 
+                         class="rounded-lg shadow-2xl w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-purple-700 mb-2">4k+</div>
+                    <div class="text-gray-600">Happy Clients</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-purple-700 mb-2">50+</div>
+                    <div class="text-gray-600">Premium Products</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-purple-700 mb-2">9+</div>
+                    <div class="text-gray-600">Years Experience</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-purple-700 mb-2">100%</div>
+                    <div class="text-gray-600">Natural Ingredients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-gray-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Success Global</h2>
+                <div class="w-20 h-1 bg-pink-400 mx-auto"></div>
+            </div>
+            
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Our Mission</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        At Success Global, we're committed to enhancing your natural beauty while promoting overall wellness. 
+                        Our mission is to provide high-quality cosmetic, beauty, and healthcare solutions that empower you 
+                        to look and feel your best every day.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Founded in 2008, we've grown from a small beauty clinic to a global organization with a presence in 
+                        12 countries, offering a comprehensive range of services and products.
+                    </p>
+                    <div class="flex space-x-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-600 mr-2"></i>
+                            <span class="text-gray-700">Certified Experts</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-600 mr-2"></i>
+                            <span class="text-gray-700">Eco-Friendly</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Our Team" 
+                             class="rounded-lg shadow-lg w-full">
+                        <div class="absolute -bottom-6 -right-6 bg-pink-600 text-white p-6 rounded-lg shadow-lg">
+                            <div class="text-3xl font-bold">15+</div>
+                            <div class="text-sm">Years of Excellence</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Premium Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Discover our comprehensive range of beauty, cosmetic, and healthcare services
+                </p>
+                <div class="w-20 h-1 bg-pink-400 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-xl p-6">
+                    <div class="service-icon bg-purple-100 text-pink-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-spa text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Skin Care Treatments</h3>
+                    <p class="text-gray-600 mb-4">
+                        Professional facials, chemical peels, and advanced skin rejuvenation treatments tailored to your skin type.
+                    </p>
+                    <a href="services.html" class="text-purple-600 font-medium inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-xl p-6">
+                    <div class="service-icon bg-purple-100 text-pink-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-syringe text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Aesthetic Medicine</h3>
+                    <p class="text-gray-600 mb-4">
+                        Non-surgical treatments including Botox, fillers, and laser therapies performed by certified professionals.
+                    </p>
+                    <a href="services.html" class="text-purple-600 font-medium inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-xl p-6">
+                    <div class="service-icon bg-purple-100 text-pink-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-heartbeat text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Wellness Programs</h3>
+                    <p class="text-gray-600 mb-4">
+                        Comprehensive health assessments and personalized wellness plans to optimize your physical and mental health.
+                    </p>
+                    <a href="services.html" class="text-purple-600 font-medium inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-xl p-6">
+                    <div class="service-icon bg-purple-100 text-pink-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-cut text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Hair Solutions</h3>
+                    <p class="text-gray-600 mb-4">
+                        From cutting-edge hair transplants to revitalizing treatments for all hair types and conditions.
+                    </p>
+                    <a href="services.html" class="text-purple-600 font-medium inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-xl p-6">
+                    <div class="service-icon bg-purple-100 text-pink-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-weight text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Body Contouring</h3>
+                    <p class="text-gray-600 mb-4">
+                        Advanced non-invasive body sculpting treatments to help you achieve your ideal physique.
+                    </p>
+                    <a href="services.html" class="text-purple-600 font-medium inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-xl p-6">
+                    <div class="service-icon bg-purple-100 text-pink-500 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-leaf text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Holistic Therapies</h3>
+                    <p class="text-gray-600 mb-4">
+                        Natural healing approaches including acupuncture, aromatherapy, and reflexology for complete wellbeing.
+                    </p>
+                    <a href="services.html" class="text-purple-600 font-medium inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Signature Products</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Premium quality cosmetics and healthcare products developed by our experts
+                </p>
+                <div class="w-20 h-1 bg-pink-400 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+               
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all card-hover">
+                    <div class="relative">
+                        <img src="images/pic6.jpg" 
+                             alt=" Serum" 
+                             class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            NEW
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Healthy food advisor</h3>
+                        <p class="text-gray-600 text-sm mb-4">Help you make informed choices about your diet to achieve specific health goals & improve overall well-being, through personalized recommendations, meal planning, or educational resources.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-purple-600 font-bold">Get</span>
+                            <a href="services.html"><button class="bg-purple-100 text-purple-700 hover:bg-purple-200 px-4 py-2 rounded-full text-sm font-medium transition-all">
+                                See More
+                            </button></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all card-hover">
+                    <div class="relative">
+                        <img src="images/cream3.jpeg" 
+                             alt="Moisturizing Cream" 
+                             class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Hydra-Renew Cream</h3>
+                        <p class="text-gray-600 text-sm mb-4">Intensive 24-hour moisture with ceramides, designed to suit your skin tone and maintaine the natural standards that keeps you glowing.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-purple-600 font-bold">Get</span>
+                            <a href="services.html"><button class="bg-purple-100 text-purple-700 hover:bg-purple-200 px-4 py-2 rounded-full text-sm font-medium transition-all">
+                                See More
+                            </button></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all card-hover">
+                    <div class="relative">
+                        <img src="images/exe1.jpg" 
+                             alt="Detox Mask" 
+                             class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            BESTSELLER
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Physical Therapy</h3>
+                        <p class="text-gray-600 text-sm mb-4">Hely you improve your ability to move, reduce pain, and enhance overall physical function through various techniques and exercises. </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-purple-600 font-bold">Get</span>
+                            <a href="services.html"><button class="bg-purple-100 text-purple-700 hover:bg-purple-200 px-4 py-2 rounded-full text-sm font-medium transition-all">
+                                See More
+                            </button></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all card-hover">
+                    <div class="relative">
+                        <img src="images/med4.png" 
+                             alt="Vitamin Supplements" 
+                             class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Age-Defying Omega 3</h3>
+                        <p class="text-gray-600 text-sm mb-4">Advanced formula with retinol and hyaluronic acid Serum. Stay energized and sharp with Mama SG Omega 3, enriched with Vitamins E, C, and B formulated for total health, clarity, and freshness.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-purple-600 font-bold">Get</span>
+                            <a href="services.html"><button class="bg-purple-100 text-purple-700 hover:bg-purple-200 px-4 py-2 rounded-full text-sm font-medium transition-all">
+                                See More
+                            </button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="services.html"><button class="bg-pink-400 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-semibold text-lg transition-all">
+                    View All Products
+                </button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-pink-500 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-xl opacity-90 max-w-3xl mx-auto">
+                    Hear from people who have experienced the Success Global difference
+                </p>
+                <div class="w-20 h-1 bg-white mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-blur-sm">
+                    <div class="flex items-center mb-6">
+                        <img src="images/no-pic.png" 
+                             alt="Sarah Johnson" 
+                             class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <h4 class="font-semibold">Sarah Johnson</h4>
+                            <div class="flex text-yellow-400 mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="italic opacity-90">
+                        "The Age-Defying Serum transformed my skin in just 4 weeks! Fine lines visibly reduced and my complexion has never looked better. Worth every penny!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-blur-sm">
+                    <div class="flex items-center mb-6">
+                        <img src="images/no-pic.png" 
+                             alt="Michael Chen" 
+                             class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <h4 class="font-semibold">Michael Bamidele</h4>
+                            <div class="flex text-yellow-400 mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="italic opacity-90">
+                        "The wellness program at Success Global helped me lose 25 pounds and completely changed my lifestyle. The team is knowledgeable and supportive."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-blur-sm">
+                    <div class="flex items-center mb-6">
+                        <img src="images/no-pic.png" 
+                             alt="Emma Rodriguez" 
+                             class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <h4 class="font-semibold">Funmi Olawale</h4>
+                            <div class="flex text-yellow-400 mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="italic opacity-90">
+                        "I've tried many beauty clinics, but Success Global stands out. Their non-surgical facelift gave me natural-looking results with zero downtime."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-purple-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Begin Your Transformation?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+                Schedule a consultation with our experts and discover personalized solutions for your beauty and wellness goals.
+            </p>
+            <!-- Product 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all card-hover">
+                    <div class="relative">
+                        <img src="images/med7.jpg" 
+                             alt="Anti-Aging Serum" 
+                             class="w-full h-60 object-cover">
+                        <div class="absolute top-2 right-2 bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            Meds for healthy leaving
+                        </div>
+                    </div>
+                    
+                </div>
+                <br>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#contact"><button class="bg-pink-500 hover:bg-purple-900 text-white px-8 py-3 rounded-full font-semibold text-lg transition-all">
+                    Book Appointment
+                </button></a>
+               <a href="mailto:successglobal2019@gmail.com"><button class="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-full font-semibold text-lg transition-all">
+                    Email Us Now
+                </button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We'd love to hear from you. Reach out for inquiries or to schedule an appointment.
+                </p>
+                <div class="w-20 h-1 bg-pink-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Get In Touch</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 text-pink-600 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Our Location</h4>
+                                <p class="text-gray-600">68 Yabaton Street,<br>Ogba, Lagos Nigeria.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 text-pink-600 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Phone Number</h4>
+                                <p class="text-gray-600">+234 802 926 7700<br>Wed-Monday: 24.7 EST</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 text-pink-600 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Email Address</h4>
+                                <p class="text-gray-600">info@okestnigeria.com<br>successglobal2019@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h4 class="font-medium text-gray-800 mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="index.html" class="bg-gray-100 hover:bg-purple-600 hover:text-white text-gray-700 p-3 rounded-full transition-all">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="index.html" class="bg-gray-100 hover:bg-purple-600 hover:text-white text-gray-700 p-3 rounded-full transition-all">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="mailto:successglobal2019@gmail.com" class="bg-gray-100 hover:bg-purple-600 hover:text-white text-gray-700 p-3 rounded-full transition-all">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="index.html" class="bg-gray-100 hover:bg-purple-600 hover:text-white text-gray-700 p-3 rounded-full transition-all">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="first-name" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                                <input type="text" id="first-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="last-name" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                                <input type="text" id="last-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service Interest</label>
+                            <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                                <option>Select a service</option>
+                                <option>Skin Care Treatments</option>
+                                <option>Aesthetic Medicine</option>
+                                <option>Wellness Programs</option>
+                                <option>Hair Solutions</option>
+                                <option>Body Contouring</option>
+                                <option>Holistic Therapies</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <a href="mailto:successglobal2019@gmail.com" button class="w-full bg-pink-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold text-lg transition-all" width="1000">
+                            Send Message                                    
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-spa text-pink-600 text-3xl mr-2"></i>
+                        <span class="text-xl font-bold">SUCCESS GLOBAL</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Your trusted partner in beauty, cosmetics, and healthcare solutions for a healthier, more beautiful you.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="index.html" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        
+                        <a href="index.html" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:successglobal2019@gmail.com" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="index.html" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Skin Care</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Aesthetic Medicine</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Wellness Programs</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Hair Solutions</a></li>
+                        
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">
+                        Subscribe to our newsletter for the latest updates and offers.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full">
+                        <a href="mailto:successglobal2019@gmail.com"button class="bg-pink-600 hover:bg-purple-700 px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button></a>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2025 Success Global. All rights reserved. | Designed with ❤️ By <a href="mailto:snwachukwu433@gmail.com">Digital Schemes & Solutions. +234 816 922 1284</a>
+                </p>
+                <div class="flex space-x-6">
+                    <a href="services.html" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                    <a href="services.html" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Add shadow to navbar on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
